@@ -27,7 +27,7 @@ public enum SeckillStatEnum {
         return stateInfo;
     }
 
-    public static SeckillStatEnum stateOd(int index) {
+    public static SeckillStatEnum stateOf(int index) {
         for (SeckillStatEnum state : values()) {
             if (state.getState() == index) {
                 return state;

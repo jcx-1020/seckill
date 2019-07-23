@@ -5,6 +5,7 @@ import org.seckill.entity.Seckill;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 秒杀的dao接口
@@ -31,11 +32,17 @@ public interface SeckillDao {
     /**
      * 根据偏移量查询秒杀商品列表
      *
-     * @param offet
+     * @param offset
      * @param limit
      * @return
      */
     List<Seckill> queryAll(@Param("offset") int offset, @Param("limit")int limit);
 
+
+    /**
+     * 使用存储过程执行秒杀
+     * @param paramMap
+     */
+    void killByProcedure(Map<String,Object> paramMap);
 
 }
